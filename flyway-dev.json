@@ -1,0 +1,14 @@
+{
+  "version": "2.0",
+  "name": "Test_project1",
+  "id": "8dace6fa-f6ac-4009-9c0a-a75626b9820c",
+  "databaseType": "PostgreSql",
+  "development": {
+    "scriptsFolder": "./schema-model"
+  },
+  "deployment": {
+    "flywayConfFiles": [
+      "./flyway.conf"
+    ]
+  }
+}
