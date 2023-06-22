@@ -1,0 +1,17 @@
+table "carrier"."product" {
+  columns = (
+    column "id" {
+      type = integer
+      null = NOT NULL
+      default = nextval('carrier.product_id_seq'::regclass)
+    }
+    column "name" {
+      type = character varying(100)
+      null = NOT NULL
+    }
+    column "sku" {
+      type = character(8)
+    }
+  )
+}
+

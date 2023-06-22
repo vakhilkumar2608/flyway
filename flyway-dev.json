@@ -9,6 +9,27 @@
   "deployment": {
     "flywayConfFiles": [
       "./flyway.conf"
-    ]
-  }
+    ],
+    "targetDatabases": [
+      {
+        "connectionProvider": {
+          "type": "UsernamePassword",
+          "url": "jdbc:postgresql://localhost:5432/SITdb",
+          "username": "flyway_adm_usr",
+          "password": {
+            "secretType": "DefaultSecretStore",
+            "name": "Flyway Desktop 04be9bf4-9e32-4dd4-9b5c-c6f6cdbac3bf"
+          }
+        },
+        "schemas": [
+          "carrier"
+        ],
+        "displayName": "SIT_database"
+      }
+    ],
+    "generateUndoScripts": true
+  },
+  "schemas": [
+    "carrier"
+  ]
 }
